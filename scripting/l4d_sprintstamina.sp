@@ -2,8 +2,8 @@
  * ======================================================================================== *
  *               [L4D & L4D2] Survivor Sprint, Stamina and Exhaustion                       *
  * ---------------------------------------------------------------------------------------- *
- *  Author	:  Eärendil                                                                     *
- *  Descrp	:  Allows survivors to sprint, adds stamina,                                    *
+ *  Author  :  Eärendil                                                                     *
+ *  Descrp  :  Allows survivors to sprint, adds stamina,                                    *
  *             if wasted stamina survivors can enter in exhaustion                          *
  *  Version :  1.3                                                                          *
  *  Link    :  None                                                                         *
@@ -861,10 +861,10 @@ int GetModeFromPrefs(int client)
 	return StringToInt(sCookie);
 }
 
-/* ======================================================================================================
-                                               Changelog
- * ------------------------------------------------------------------------------------------------------
-* 1.3   (02-Jul-2022)
+/* ====================================================================================================== *
+ *                                             Changelog                                                  *
+ * ------------------------------------------------------------------------------------------------------ *
+ * 1.3   (02-Jul-2022)
         - New sprint activation modes (saved upon plugin disable and server restart).
          * Disable sprint.
          * Double pressing forward (classic).
@@ -876,28 +876,34 @@ int GetModeFromPrefs(int client)
         - Classic sprint is not activated if any other movement button
           is pressed between forward buttons, this prevents accidentally activating sprint.
         - Changed default value of "l4d_sse_stamina_min" from 0 to 30.
-* 1.2   (01-Feb-2022)
+	
+ * 1.2   (01-Feb-2022)
         - Limping sprint and adrenaline speed can be scaled by ConVar.
         - Survivors can't attempt to sprint if they are incapacitated.
         - If a survivor isn't moving due to an obstacle or healing/reviving, sprint cancels automatically.
         - Survivor stamina will be at maximum value if survivor is under adrenaline effect.
         - Healing triggers stamina regeneration if maximum stamina increased.
-* 1.1.2 (23-Jan-2022)
+	
+ * 1.1.2 (23-Jan-2022)
         - Fixed bug when survivor wouldn't sprint when limping if allowed by ConVar (thanks to Shao for the report).
-* 1.1.1 (01-Jan-2022)
+	
+ * 1.1.1 (01-Jan-2022)
         - Fixed Handle errors related with timers.
         - Fixed a bug when survivor goes idle and comes back the stamina is fully restored.
-* 1.1   (30-Dec-2021)
+	
+ * 1.1   (30-Dec-2021)
         - Fixed invalid_handle error on "player_death" event.
         - Fixed a bug where exhaustion corrupted survivor speeds.
         - Fixed bugs on mapchanges, round restarts or player connection.
         - Fixed a bug where sprint doesn't end if stamina is depleted and l4d_sse_exhaustion is set to 0.
         - The amount of exhaustion now can be controlled by COnVar.
         - If survivor goes replaced by a bot, its stamina will be stored for the next time he comes back.
-* 1.0.1 (25-Dec-2021)
+	
+ * 1.0.1 (25-Dec-2021)
         - Fixed invalid client errors.
         - Fixed wrong ConVars.
         - sm_sse_enable now works properly.
-* 1.0   (25-Dec-2021)
+	
+ * 1.0   (25-Dec-2021)
         - Initial release.
-============================================================================================*/
+ * ====================================================================================================== */
