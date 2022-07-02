@@ -291,10 +291,9 @@ public Action OnPlayerRunCmd(int client, int& buttons, int& impulse, float vel[3
 	return Plugin_Continue;
 }
 
-
-
 /* ========================================================================================== *
  *                                          ConVars                                           *
+ 
  * ========================================================================================== */
 void CVarChange_Enable(Handle convar, const char[] oldValue, const char[] newValue)
 {
@@ -865,7 +864,7 @@ int GetModeFromPrefs(int client)
  *                                             Changelog                                                  *
  * ------------------------------------------------------------------------------------------------------ *
  * 1.3   (02-Jul-2022)
-        - New sprint activation modes (saved upon plugin disable and server restart).
+        - New sprint activation modes, client preferences will be saved.
          * Disable sprint.
          * Double pressing forward (classic).
          * Pressing forward and walk buttons.
